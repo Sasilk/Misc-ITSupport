@@ -1,0 +1,7 @@
+If you get a request from a user that they want to put a link in their email which will open a folder in the shared drive, here the solution;
+
+file://\\FileServerName\PathToFolder\New%20Folder
+
+Note:
+Put "file://\\" + enter your file server name + enter file path 
+If there are folder names with spaces, basically replace space with %20
