@@ -1,0 +1,20 @@
+How to create shortcut for new Microsoft Teams
+
+As our dear Microsoft loves changes we/IT admins have to find out new stuff even for basic IT requests. Seeing the glass as half full, I guess Microsoft makes us keep learning, stay with a fresh mind, feel smart,… (!)
+
+If one of your users complains that “There was small Teams picture on my desktop but it has now gone” meaning they would like to have a shortcut on their desktop for Teams app,
+unfortunately you now can’t easily find teams.exe in their Program Files to copy the folder path. Because you can’t create shortcuts for pre-installed MS apps or MS Store apps.
+
+But I will tell you how I found Teams app and managed to create a shortcut.
+
+- Press Windows+R
+- Run shell:appsfolder and open the folder
+- Right click on Microsoft Teams and select “Create shortcut”
+- It will ask you the following question where you will say ‘Yes darling I will! I will!’ (Nope, you will say that in a completely different question ;))
+"Do you want the shortcut to be placed on the desktop instead?" 
+
+
+
+
+
+
