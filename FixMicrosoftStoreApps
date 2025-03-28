@@ -1,0 +1,27 @@
+I am sure you have experienced one or more of your users complain that their calculator suddenly stopped working and/or that they can no longer open pictures in the photos app.
+In such cases, as an IT admin, there are several fixes to try but almost all of them are likely to fail.
+
+To save your time, I wanted to share the exact way of fixing MS Store apps.
+
+But need to mention that the following steps have been created by Dan, a friend of mine, who is a great IT engineer. So, I can’t take credit on this (because I know you will thank me as the fixes below works perfectly :)).
+
+Fixing MS Store — Method 1
+
+We need to open PowerShell (PS) as admin and run this command which will re-register Store app.
+  Get-AppXPackage WindowsStore -AllUsers | Foreach {Add-AppxPackage -DisableDevelopmentMode -Register “$($_.InstallLocation)\AppXManifest.xml”}
+Then open PS as the user (not admin) and run this command, which reinstalls it in the user profile and not the admin one.
+  wsreset.exe
+
+Fixing MS Store — Method 2
+
+If that fails then
+Download this script: https://go.microsoft.com/fwlink/?LinkId=619547 and extract it.
+Run it within the user’s PS (not admin) again
+  .\reinstall-preinstalledApps.ps1 Microsoft.WindowsStore
+
+You may have an error if PS is blocking the script from running due to its execution policy settings on user’s device. To allow script execution, run
+  Set-ExecutionPolicy Bypass -Scope Process
+  (To change the execution policy permanently for your user, run: Set-ExecutionPolicy RemoteSigned -Scope CurrentUser)
+
+Then run
+  wsreset.exe
